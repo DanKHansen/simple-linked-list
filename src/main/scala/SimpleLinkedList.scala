@@ -8,7 +8,7 @@ trait SimpleLinkedList[T]:
 
 object SimpleLinkedList:
    def fromSeq[T](seq: Seq[T]): SimpleLinkedList[T] = LinkedList(seq.toList)
-   def apply[T](ts: T*): SimpleLinkedList[T] = fromSeq[T](ts.toSeq)
+   def apply[T](ts: T*): SimpleLinkedList[T] = fromSeq[T](ts.toList)
 
 class LinkedList[T](l: List[T]) extends SimpleLinkedList[T]:
    override def isEmpty: Boolean = l.isEmpty
